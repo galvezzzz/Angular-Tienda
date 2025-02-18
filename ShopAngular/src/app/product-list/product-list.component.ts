@@ -22,4 +22,12 @@ export class ProductListComponent {
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
   }
+
+  lowStock(){
+    this.products = this.products.filter(p => {
+      if(p.stock < 4){
+        window.alert('El producto tiene un stock bajo');
+      }
+    })
+  }
 }
